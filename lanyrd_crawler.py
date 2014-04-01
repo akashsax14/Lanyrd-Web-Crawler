@@ -6,14 +6,14 @@ from threading import Thread
 #=====================================#
 # List of conferences : writefile.txt #
 # Every conference on new line with   #
-# tab separated values				  #
-# [0] = conference name			      #
-# [1] = date						  #
-# [2] = location					  #
-# [3] = url						      #
-# [4] = speakers					  #
+# tab separated values		      #
+# [0] = conference name		      #
+# [1] = date			      #
+# [2] = location		      #
+# [3] = url			      #
+# [4] = speakers		      #
 #=====================================#
-# Crawler class					      #
+# Crawler class			      #
 #======================================================================#
 class Crawler(threading.Thread):
 #======================================================================#
@@ -24,8 +24,8 @@ class Crawler(threading.Thread):
 		self.writefile = writefile
 		self.lock = lock#Lock()
 #======================================================================#
-# Crawls the actual conference link and parses data from it and		   #
-# writes onto a file												   #
+# Crawls the actual conference link and parses data from it and	       #
+# writes onto a file						       #
 #======================================================================#
 	def crawl_conf(self, url):
 		try:
@@ -120,8 +120,8 @@ class Crawler(threading.Thread):
 			if debug_flag:
 				print "Exception in crawl_conf : " + str(e)
 #======================================================================#
-# Run(named as run, in case user wants multithreading) method for	   #
-# further extraction of links										   #
+# Run(named as run, in case user wants multithreading) method for      #
+# further extraction of links					       #
 #======================================================================#
 	def run(self):
 		try:
@@ -188,7 +188,7 @@ def start_crawl():
 		if debug_flag:
 			print "Exception in crawl : " + str(e)
 #======================================================================#
-# Main method : Program execution starts here						   #
+# Main method : Program execution starts here			       #
 #======================================================================#
 def main():
 	global debug_flag, thread_flag, limit_flag, limit_count
